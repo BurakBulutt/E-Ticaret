@@ -27,12 +27,12 @@ public class AddressController {
         } else if (customerId!=null) {
             return service.findByCustomerId(Integer.parseInt(customerId))
                     .stream()
-                    .map(dto -> AddressResponse.toResponse(dto))
+                    .map(AddressResponse::toResponse)
                     .collect(Collectors.toList());
         }
         return service.findAll()
                 .stream()
-                .map(dto -> AddressResponse.toResponse(dto))
+                .map(AddressResponse::toResponse)
                 .collect(Collectors.toList());
     }
 
