@@ -1,0 +1,18 @@
+server:
+  port: 9090
+spring:
+  main:
+    allow-circular-references: on
+  application:
+    name: E-Ticaret V2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/e_ticaret_v2?useSSL=false&AllowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: burak2424
+  jpa:
+    hibernate:
+      ddl-auto: update
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
